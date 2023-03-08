@@ -21,13 +21,11 @@ function signUp(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
      firebase.auth().createUserWithEmailAndPassword(email, password)
-         .then((userCredential) => {
+         .then(() => {
 		    // Signed in 
-		    const user = userCredential.user;
-		    console.log(user);
 		    alert("Registration successfully!!");
 		    // ...
-		  }
+		  })
     .catch((error) => {
        document.getElementById("error").innerHTML = error.message
     });
