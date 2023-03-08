@@ -23,7 +23,7 @@ function signUp(){
     //firebase.auth().createUserWithEmailAndPassword(email, password)
     //.catch((error) => {
       //  document.getElementById("error").innerHTML = error.message
-            firebaseAuth.createUserWithEmailAndPassword(userEmail,userPassword)
+            firebaseAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
