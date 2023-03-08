@@ -12,9 +12,9 @@ function login(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
     firebase.auth().signInWithEmailAndPassword(email, password)
-    .catch((error)=>{
-        document.getElementById("error").innerHTML = error.message
-    })
+   // .catch((error)=>{
+     //   document.getElementById("error").innerHTML = error.message
+    //})
 }
 
 function signUp(){
