@@ -12,9 +12,9 @@ function login(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
     firebase.auth().signInWithEmailAndPassword(email, password)
-   // .catch((error)=>{
-     //   document.getElementById("error").innerHTML = error.message
-    //})
+    .catch((error)=>{
+       document.getElementById("error").innerHTML = error.message
+    })
 }
 
 function signUp(){
@@ -26,9 +26,9 @@ function signUp(){
 		    alert("Registration successfully!!");
 		    // ...
 		  })
-   // .catch((error) => {
-     //  document.getElementById("error").innerHTML = error.message
-   // });
+	     .catch((error) => {
+       document.getElementById("error").innerHTML = error.message
+    });
 }
 
 function forgotPass(){
@@ -37,7 +37,7 @@ function forgotPass(){
     .then(() => {
         alert("Reset link sent to your email id")
     })
-    //.catch((error) => {
-      //  document.getElementById("error").innerHTML = error.message
-    //});
+    .catch((error) => {
+      document.getElementById("error").innerHTML = error.message
+    });
 }
