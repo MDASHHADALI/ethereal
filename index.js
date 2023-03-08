@@ -26,9 +26,9 @@ function signUp(){
 		    alert("Registration successfully!!");
 		    // ...
 		  })
-    .catch((error) => {
-       document.getElementById("error").innerHTML = error.message
-    });
+   // .catch((error) => {
+     //  document.getElementById("error").innerHTML = error.message
+   // });
 }
 
 function forgotPass(){
