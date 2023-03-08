@@ -37,7 +37,7 @@ function forgotPass(){
     .then(() => {
         alert("Reset link sent to your email id")
     })
-    .catch((error) => {
-        document.getElementById("error").innerHTML = error.message
-    });
+    //.catch((error) => {
+      //  document.getElementById("error").innerHTML = error.message
+    //});
 }
