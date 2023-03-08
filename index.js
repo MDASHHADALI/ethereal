@@ -20,24 +20,9 @@ function login(){
 function signUp(){
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
-    //firebase.auth().createUserWithEmailAndPassword(email, password)
-    //.catch((error) => {
-      //  document.getElementById("error").innerHTML = error.message
-            firebaseAuth.createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "New user registration: " + task.isSuccessful());
-
-                        if (!task.isSuccessful()) {
-                            SignupActivity.this.showToast("Authentication failed. " + task.getException());
-                        } else {
-                            SignupActivity.this.startActivity(new Intent(SignupActivity.this, MainActivity.class));
-                            SignupActivity.this.finish();
-                        }
-                    }
-                });
-
+     firebase.auth().createUserWithEmailAndPassword(email, password)
+    .catch((error) => {
+       document.getElementById("error").innerHTML = error.message
     });
 }
 
